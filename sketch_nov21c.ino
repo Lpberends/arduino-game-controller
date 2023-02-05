@@ -8,7 +8,7 @@ void setup(){
    Keyboard.begin();
 } 
 void loop()
-{   
+{
   if(digitalRead(LeftButton) == HIGH){
   Keyboard.press(97);
   delay(100);
@@ -18,7 +18,8 @@ if(digitalRead(RightButton) == HIGH){
   delay(100);
    }
 if(digitalRead(11) == LOW){
-if(digitalRead(12) == LOW)
-  Keyboard.releaseAll();
+  Keyboard.release(97);
    }
-}
+if(digitalRead(12) == LOW){
+  Keyboard.release(100);
+} 
